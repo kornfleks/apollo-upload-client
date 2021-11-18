@@ -1,5 +1,3 @@
-'use strict';
-
 const { ApolloLink, Observable } = require('@apollo/client/core');
 const {
   createSignalIfSupported,
@@ -11,8 +9,8 @@ const {
   serializeFetchParameter,
 } = require('@apollo/client/link/http');
 const extractFiles = require('extract-files/public/extractFiles.js');
-const formDataAppendFile = require('./formDataAppendFile.js');
-const isExtractableFile = require('./isExtractableFile.js');
+import formDataAppendFile from './formDataAppendFile.js';
+import isExtractableFile from './isExtractableFile.js'
 
 /**
  * Creates a
@@ -72,7 +70,7 @@ const isExtractableFile = require('./isExtractableFile.js');
  * });
  * ```
  */
-module.exports = function createUploadLink({
+export default function createUploadLink({
   uri: fetchUri = '/graphql',
   useGETForQueries,
   isExtractableFile: customIsExtractableFile = isExtractableFile,

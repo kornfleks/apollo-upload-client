@@ -28,6 +28,6 @@
  * const formDataAppendFile = require('apollo-upload-client/public/formDataAppendFile.js');
  * ```
  */
-module.exports = function formDataAppendFile(formData, fieldName, file) {
+export default function formDataAppendFile(formData, fieldName, file) {
   formData.append(fieldName, file, file.name);
 };

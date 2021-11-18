@@ -33,7 +33,7 @@
   "main": "public",
   "exports": {
     ".": {
-      "import": "./public/index.mjs",
+      "import": "./public/index.js",
       "require": "./public/index.js"
     },
     "./public/*": "./public/*",
